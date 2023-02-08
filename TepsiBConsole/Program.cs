@@ -14,9 +14,9 @@ namespace TepsiBConsole
             string res = "";
             while (num > 0)
             {
-                int resto = num % 2;
+                int resto = num % 8;
                 res = resto + res;
-                num = num / 2;
+                num = num / 8;
             }
             Console.WriteLine($" risultato {res}");
         }
