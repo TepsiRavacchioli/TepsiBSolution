@@ -19,9 +19,34 @@ namespace TepsiBConsole
             toBase = Convert.ToInt32(Console.ReadLine());
             while (num > 0)
             {
-                int resto = num % toBase;
-                res = resto + res;
-                num = num / toBase;
+                int resto = num % 16;
+                string alfa = "";
+                switch (resto)
+                {
+                    case 10:
+                        alfa = "A";
+                        break;
+                    case 11:
+                        alfa = "B";
+                        break;
+                    case 12:
+                        alfa = "C";
+                        break;
+                    case 13:
+                        alfa = "B";
+                        break;
+                    case 14:
+                        alfa = "E";
+                        break;
+                    case 15:
+                        alfa = "F";
+                        break;
+                    default:
+                        alfa = alfa +resto;
+                        break;
+                }
+                res = alfa + res;
+                num = num / 16;
             }
             Console.WriteLine($" risultato conversione di {num} in base {toBase}: {res}");
         }
